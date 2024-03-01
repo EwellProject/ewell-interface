@@ -87,7 +87,7 @@ export default function PurchaseButton({
       return;
     }
 
-    const amount = allocationAmount.toString();
+    const amount = allocationAmount.toFixed();
     let needApprove = false;
     try {
       needApprove = await checkIsNeedApprove({
@@ -231,7 +231,7 @@ export default function PurchaseButton({
               <Text fontWeight={FontWeightEnum.Medium}>Balance</Text>
             </Flex>
             <Text fontWeight={FontWeightEnum.Medium}>
-              {divDecimalsStr(toRaiseTokenBalance, projectInfo?.toRaiseToken?.decimals ?? 8)}{' '}
+              {divDecimalsStr(toRaiseTokenBalance, projectInfo?.toRaiseToken?.decimals ?? 8, '0')}{' '}
               {projectInfo?.toRaiseToken?.symbol ?? '--'}
             </Text>
           </Flex>

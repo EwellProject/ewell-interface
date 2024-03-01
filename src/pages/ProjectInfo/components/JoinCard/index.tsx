@@ -414,7 +414,7 @@ export default function JoinCard({ projectInfo, isPreview, isLogin, handleRefres
                             const maxValue = divDecimals(
                               maxCanInvestAmount,
                               projectInfo?.toRaiseToken?.decimals,
-                            ).toString();
+                            ).toFixed();
                             setPurchaseInputValue(maxValue);
                             handleValidatePurchaseInput(maxValue);
                           }}

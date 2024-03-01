@@ -111,9 +111,7 @@ export const useTransfer = () => {
         fetch: () => getDetail(projectId),
         times: 30,
         interval: 2000,
-        checkIsContinue: (detail) => {
-          return !detail;
-        },
+        checkIsContinue: (detail) => !detail,
       });
 
       return {

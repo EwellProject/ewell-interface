@@ -62,7 +62,7 @@ const Transfer: React.FC<CreateStepProps> = ({ onPre }) => {
       },
       targetRaisedAmount: new BigNumber(data.crowdFundingIssueAmount)
         .div(divDecimals(data.preSalePrice, PriceDecimal))
-        .toString(),
+        .toFixed(),
     } as TConfirmInfo;
   }, [additional, contractAddress, idoInfo, toRaiseToken, tradingPair]);
 
