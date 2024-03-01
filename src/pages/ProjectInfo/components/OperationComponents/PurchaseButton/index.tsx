@@ -87,7 +87,7 @@ export default function PurchaseButton({
       return;
     }
 
-    const amount = allocationAmount.toString();
+    const amount = allocationAmount.toFixed();
     let needApprove = false;
     try {
       needApprove = await checkIsNeedApprove({
