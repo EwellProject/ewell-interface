@@ -59,7 +59,7 @@ const TokenEmpty: React.FC = React.memo(() => {
 
 const ConfirmTradingPair: React.FC<CreateStepProps> = ({ onNext }) => {
   const [tradingPair, setTradingPair] = useLocalStorage<ITradingParCard>(storages.ConfirmTradingPair);
-  const [currency, setCurrency] = useLocalStorage<TokenType>(storages.Currency);
+  const [currency, setCurrency] = useLocalStorage<TokenType>(storages.Currency, TokenType.ELF);
   const [select, setSelect] = useState<ITradingParCard | undefined>(tradingPair);
   const selectRef = useRef<ITradingParCard>();
   selectRef.current = select;
@@ -156,7 +156,7 @@ const ConfirmTradingPair: React.FC<CreateStepProps> = ({ onNext }) => {
                   suffixIcon={
                     <img src={arrow} className={clsx(showDropdown ? 'select-arrow-up' : 'select-arrow-down')} />
                   }
-                  defaultValue={currency || TokenType.ELF}
+                  defaultValue={currency}
                   options={currencyOptions}
                   style={{ width: '100%' }}
                   onSelect={onSelectCurrency}

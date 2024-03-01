@@ -50,9 +50,10 @@ export function ConfirmModal({ open, info, onCancel, onOk }: ITransferModalProps
 
   const isGasEnough = useMemo(() => {
     console.log('efl-balance', ELFBalance);
+    console.log('payGasELF', payGasELF.toNumber());
     const walletELF = ZERO.plus(ELFBalance ?? 0);
-    return walletELF.gte(timesDecimals(payGasELF, info?.toRaiseToken?.decimals || 8));
-  }, [ELFBalance, info?.toRaiseToken?.decimals, payGasELF]);
+    return walletELF.gte(timesDecimals(payGasELF, TokenType.ELF));
+  }, [ELFBalance, payGasELF]);
 
   const isDisabledSubmit = useMemo(() => !isGasEnough || !isTokenEnough, [isGasEnough, isTokenEnough]);
 
