@@ -20,6 +20,7 @@
     "@portkey-v1/did-ui-react": "1.5.4-alpha.22",
     "@portkey/did-ui-react": "^2.0.2",
     "@react-spring/web": "^9.7.0",
+    "@sentry/react": "^7.104.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
