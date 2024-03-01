@@ -123,7 +123,7 @@ export const getProjectInfoFromJson = (isMobile: boolean): FormItemProps[] => {
         tips: <LogoUploadTips />,
         maxFileCount: 1,
         fileLimit: '10M',
-        accept: '.jpg,.jpeg.,.png',
+        accept: '.jpg,.jpeg,.png',
       },
     },
     {
@@ -139,7 +139,7 @@ export const getProjectInfoFromJson = (isMobile: boolean): FormItemProps[] => {
         tips: <FeaturedUploadTips />,
         maxFileCount: 5,
         fileLimit: '10M',
-        accept: '.jpg,.jpeg.,.png',
+        accept: '.jpg,.jpeg,.png',
       },
     },
     getInputOptions({
