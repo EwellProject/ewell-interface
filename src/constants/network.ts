@@ -125,3 +125,7 @@ export const NETWORK_CONFIG = NETWORK_CONFIG_LIST[process.env.REACT_APP_NETWORK_
 export const DEFAULT_CHAIN_ID = NETWORK_CONFIG_LIST[process.env.REACT_APP_NETWORK_KEY || ''].sideChainId;
 
 export const IS_OFFLINE_NETWORK = process.env.REACT_APP_NETWORK_KEY === 'dev';
+
+export const IS_MAINNET_PRODUCTION = process.env.REACT_APP_NETWORK_KEY === 'mainnet';
+
+export const SENTRY_DSN = process.env.REACT_APP_SENTRY_DSN;
