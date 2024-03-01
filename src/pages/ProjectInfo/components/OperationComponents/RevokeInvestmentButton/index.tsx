@@ -167,7 +167,7 @@ export default function RevokeInvestmentButton({ projectInfo }: IRevokeInvestmen
             <Text fontWeight={FontWeightEnum.Medium}>Available</Text>
             <Flex gap={8} align="baseline">
               <Text fontWeight={FontWeightEnum.Medium}>
-                {divDecimalsStr(revokeAmount, projectInfo?.toRaiseToken?.decimals)}{' '}
+                {divDecimalsStr(revokeAmount, projectInfo?.toRaiseToken?.decimals, '0')}{' '}
                 {projectInfo?.toRaiseToken?.symbol ?? '--'}
               </Text>
               {renderTokenPrice({
@@ -226,7 +226,7 @@ export default function RevokeInvestmentButton({ projectInfo }: IRevokeInvestmen
         data={{
           amountList: [
             {
-              amount: divDecimalsStr(revokeAmount, projectInfo?.toRaiseToken?.decimals),
+              amount: divDecimalsStr(revokeAmount, projectInfo?.toRaiseToken?.decimals, '0'),
               symbol: projectInfo?.toRaiseToken?.symbol || '--',
             },
           ],
