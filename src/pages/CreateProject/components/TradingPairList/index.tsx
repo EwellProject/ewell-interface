@@ -57,9 +57,7 @@ const TradingPairList: React.FC<TradingParCardProps> = ({ list = [], current, on
             <div>
               <div className="token-name">{item.symbol}</div>
               <div className="chain-info">
-                {item.chainId === NETWORK_CONFIG.mainChainId
-                  ? `MainChain ${NETWORK_CONFIG.mainChainId}`
-                  : `SideChain ${NETWORK_CONFIG.sideChainId}`}
+                {item.chainId === NETWORK_CONFIG.mainChainId ? 'aelf MainChain' : 'aelf dAppChain'}
               </div>
               {isMobile && <div className="token-quantity">{divDecimalsStr(item.balance, item.decimals)}</div>}
             </div>
