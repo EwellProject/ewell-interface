@@ -48,7 +48,7 @@ jobs:
             REACT_APP_ICON_FONT_URL='https://lf1-cdn-tos.bytegoofy.com/obj/iconpark/svg_10590_33.dc6883c80c33727b6fa0f1fd40313339.js'
             REACT_APP_S3_IDENTITY_POOL_ID=${{ secrets.REACT_APP_S3_IDENTITY_POOL_ID_TESTNET}}
             REACT_APP_S3_BUCKET=${{ secrets.REACT_APP_S3_BUCKET_TESTNET}}
-            REACT_APP_NETWORK_KEY: testnet
+            REACT_APP_NETWORK_KEY=testnet
   dispatch:
     runs-on: ewell-runner
     needs: build-and-push-image
