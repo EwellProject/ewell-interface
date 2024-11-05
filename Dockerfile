@@ -37,7 +37,7 @@ ENV REACT_APP_WHITELIST_CONTRACT_ADDRESS=${REACT_APP_WHITELIST_CONTRACT_ADDRESS}
 
 
 WORKDIR /app
-COPY --from=deps /app/node_modules ./node_modules
+#COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
 # Next.js collects completely anonymous telemetry data about general usage.
@@ -46,9 +46,9 @@ COPY . .
 # ENV NEXT_TELEMETRY_DISABLED 1
 
 RUN \
-    if [ -f yarn.lock ]; then yarn run build:${REACT_APP_NETWORK_KEY}; \
-    elif [ -f package-lock.json ]; then  npm run build:${REACT_APP_NETWORK_KEY}; \
-    elif [ -f pnpm-lock.yaml ]; then corepack enable pnpm && pnpm run build:${REACT_APP_NETWORK_KEY}; \
+    if [ -f yarn.lock ]; then yarn run build; \
+    elif [ -f package-lock.json ]; then  npm run build; \
+    elif [ -f pnpm-lock.yaml ]; then corepack enable pnpm && pnpm run build; \
     else echo "Lockfile not found." && exit 1; \
     fi
 
