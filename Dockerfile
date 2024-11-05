@@ -37,7 +37,7 @@ ENV REACT_APP_WHITELIST_CONTRACT_ADDRESS=${REACT_APP_WHITELIST_CONTRACT_ADDRESS}
 
 
 WORKDIR /app
-#COPY --from=deps /app/node_modules ./node_modules
+COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
 # Next.js collects completely anonymous telemetry data about general usage.
