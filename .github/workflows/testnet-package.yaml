@@ -64,7 +64,7 @@ jobs:
               workflow_id: 'deployment_testnet.yaml',
               ref: 'main',
               inputs: {
-                appName: 'ewell-web',
+                appName: 'ewell-interface',
                 commit_sha: 'sha-${{ needs.build-and-push-image.outputs.short_sha }}',
               }
             })
