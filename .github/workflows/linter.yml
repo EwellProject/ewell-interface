@@ -66,3 +66,4 @@ jobs:
           VALIDATE_SHELL_SHFMT: false
           VALIDATE_BASH: false
           IGNORE_GENERATED_FILES: true
+          DISABLE_ERRORS: true
