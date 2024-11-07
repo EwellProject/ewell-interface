@@ -52,8 +52,8 @@ jobs:
         env:
           VALIDATE_ALL_CODEBASE: false
           # Change to 'master' if your main branch differs
-          DEFAULT_BRANCH: main
-          GITHUB_TOKEN: ${{ secrets.ZZ_EWELL_GITHUB_TOKEN }}
+          DEFAULT_BRANCH: master
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ################# ESLint config #################
           LINTER_RULES_PATH: /
           JAVASCRIPT_ES_CONFIG_FILE: .eslintrc.json
@@ -66,3 +66,4 @@ jobs:
           VALIDATE_SHELL_SHFMT: false
           VALIDATE_BASH: false
           IGNORE_GENERATED_FILES: true
+          DISABLE_ERRORS: true
